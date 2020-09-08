@@ -1,0 +1,3 @@
+variable "team" {}
+
+variable "application" {}

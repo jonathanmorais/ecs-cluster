@@ -1,0 +1,33 @@
+[
+  {
+    "name": "${service_id}",
+    "image": "${image}",
+    "essential": true,
+    "cpu": ${cpu},
+    "memory": ${memory},
+    "memoryReservation": ${memory},
+    "environment": ${environment},
+    "portMappings": [
+      {
+        "containerPort": ${port},
+        "hostPort": ${port}
+      }
+    ],
+    "ulimits": [
+      {
+        "name": "nofile",
+        "softLimit": 65536,
+        "hardLimit": 262144
+      }
+    ],
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "secretOptions": null,
+      "options": {
+        "awslogs-group": "${log_group}",
+        "awslogs-region": "us-east-1",
+        "awslogs-stream-prefix": "/ecs"
+      }
+    }
+  }
+]
