@@ -1,6 +1,6 @@
 resource "aws_launch_configuration" "lc" {
   name                 = "${var.ecs_cluster}-${var.name}-ECSLaunchConfiguration"
-  image_id             = "ami-06b263d6ceff0b3dd"
+  image_id             = "ami-ecd5e884" ## ecs image optmize
   instance_type        = var.instace_type
   iam_instance_profile = "ecsInstanceRole"
   security_groups      = var.network.security_groups
