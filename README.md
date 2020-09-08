@@ -19,7 +19,7 @@ Veja como invocar este módulo de exemplo em seus projetos, no caso aqui, é usa
 module "ecs_cluster" {
     source = "../../modules/ecs-cluster"
     team   = "foo"
-    capacity_providers = xxx
+    capacity_providers = [xxx]
     tags = {
         team        = "squad-foo"
         Billing     = "squad-foo"
