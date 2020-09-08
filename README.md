@@ -162,7 +162,8 @@ module "ecs_service" {
 ## USAGE LOCAL
 
 ```
-make run
+make infra_init
+make infra_apply
 ```
 
 ## OBS.
